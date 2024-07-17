@@ -1,12 +1,8 @@
 #pip install streamlit
 import os
 import streamlit as st
-from dotenv import load_dotenv
-import os
-load_dotenv()
 
-api_key = os.getenv("OPENAI_API_KEY")
-os.environ["OPENAI_API_KEY"] = api_key
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 st.title("Tweet Generator - V 🐦")
 
